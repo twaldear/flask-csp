@@ -1,0 +1,1 @@
+{"script-src": "", "img-src": "", "object-src": "", "default-src": "'none'", "plugin-src": "", "style-src": "", "media-src": "", "child-src": "", "connect-src": "", "base-uri": "", "report-uri": "/csp_report"}
