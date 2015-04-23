@@ -10,6 +10,11 @@ setup(
   package_data = {'':['csp_default.json']},
   version = '0.37',
   description = 'Flask Content Security Policy header support',
+  long_description = """
+Add a Content Security Policy header to your Flask application. 
+
+Mitigate the risk of cross-site scripting attacks by whitelisting trusted origins with a Content Security Policy. 
+"""
   license='MIT',
   author = 'Tristan Waldear',
   author_email = 'trwaldear@gmail.com',
