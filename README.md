@@ -2,8 +2,9 @@
 
 Add a Content Security Policy header to your Flask application.
 More information on CSP:
-* http://www.w3.org/TR/CSP2/
-* http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+* [w3c documentation](http://www.w3.org/TR/CSP2/)
+* [Useful guide](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
+* [pypi](https://pypi.python.org/pypi/flask-csp)
 
 ## Installation
 Install the extension with using pip, or easy_install.
