@@ -15,7 +15,7 @@ Add the csp_header(...) decorator after the app.route(...) decorator to create a
 
 ### Add default header
 ```python
-from csp_headers import csp_header
+from flask_csp.csp import csp_header
 ...
 @app.route('/')
 @csp_header()
@@ -23,7 +23,7 @@ from csp_headers import csp_header
 ### Add custom header
 Pass the csp_header wrapper a dict with the policies to change
 ```python
-from csp_headers import csp_header
+from flask_csp.csp import csp_header
 ...
 @app.route('/')
 @csp_header({'default-src':"'none'",'script-src':"'self'"})
@@ -34,7 +34,7 @@ Notes:
 
 ### Report only header
 ```python
-from csp_headers import csp_header
+from flask_csp.csp import csp_header
 ...
 @app.route('/')
 @csp_header({'report-only':True})
@@ -59,17 +59,19 @@ The default policies are as follows:
 ```
 Editing of the default policies can be done via command line:
 ```python
->>> from csp_headers import csp_default
+>>> from flask_csp.csp import csp_default
 >>> h = csp_default()
 >>> h.update({'child-src':"'self'"})
 ```
 
 To view the default policies:
 ```python
->>> from csp_headers import csp_default
+>>> from flask_csp.csp import csp_default
 >>> h = csp_default()
 >>> h.read()
 ```
+Note: 
+* python interpreter must be reloaded for changes to default to take place
 
 ## Violation Reports
 Based on the default settings, reports will be sent to a post request via the route 'csp_report'. This is totally customizable but here is a very simplistic example of handling these reports:
