@@ -1,7 +1,7 @@
 import unittest
 import tempfile
 from flask import Flask
-from csp_headers import csp_default, create_csp_header, csp_header
+from flask_csp.csp import csp_default, create_csp_header, csp_header
 
 class CspTestFunctions(unittest.TestCase):
 	""" test base functions """
