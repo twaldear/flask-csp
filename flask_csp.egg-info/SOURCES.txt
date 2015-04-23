@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+flask_csp/.DS_Store
+flask_csp/__init__.py
+flask_csp/__init__.pyc
+flask_csp/csp.py
+flask_csp/csp_default.json
+flask_csp/flask_csp.pyc
+flask_csp/test_csp.py
+flask_csp.egg-info/PKG-INFO
+flask_csp.egg-info/SOURCES.txt
+flask_csp.egg-info/dependency_links.txt
+flask_csp.egg-info/top_level.txt
