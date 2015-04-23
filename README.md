@@ -75,7 +75,7 @@ Note:
 * python interpreter must be reloaded for changes to default to take place
 
 ## Violation Reports
-Based on the default settings, reports will be sent to a post request via the route 'csp_report'. This is totally customizable but here is a very simplistic example of handling these reports:
+Based on the default settings, reports will be sent to the route 'csp_report' through a POST request. This is totally customizable but here is a very simplistic example of handling these reports:
 ```python
 @app.route('/csp_report',methods=['POST'])
 def csp_report():
