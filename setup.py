@@ -7,7 +7,7 @@ setup(
   packages = ['flask_csp'],
   include_package_data = True,
   package_data = {'':['csp_default.json']},
-  version = '0.39',
+  version = '0.9',
   description = 'Flask Content Security Policy header support',
   long_description = """
 Add a Content Security Policy header to your Flask application. 
