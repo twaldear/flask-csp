@@ -4,11 +4,10 @@ import flask_csp
 
 setup(
   name = 'flask-csp',
-  py_modules = ['flask_csp'],
   packages = ['flask_csp'],
   include_package_data = True,
   package_data = {'':['csp_default.json']},
-  version = '0.37',
+  version = '0.39',
   description = 'Flask Content Security Policy header support',
   long_description = """
 Add a Content Security Policy header to your Flask application. 
@@ -22,8 +21,11 @@ Mitigate the risk of cross-site scripting attacks by whitelisting trusted origin
   download_url = 'https://github.com/twaldear/flask-csp/tarball/0.1',
   keywords = ['flask', 'csp', 'header'],
   classifiers=[
-    'Programming Language :: Python :: 2',
+    'Development Status :: 4 - Beta',
+    'Framework :: Flask',
+    'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
+    'Programming Language :: Python',
     'Topic :: Software Development :: Libraries :: Python Modules',
   ]
 )
