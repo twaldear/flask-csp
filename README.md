@@ -4,15 +4,16 @@ Add a Content Security Policy header to your Flask application.
 More information on CSP:
 * [w3c documentation](http://www.w3.org/TR/CSP2/)
 * [useful guide](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
-* [pypi](https://pypi.python.org/pypi/flask-csp)
 
 ## Installation
 Install the extension with using pip, or easy_install.
 ```bash
 $ pip install flask-csp
 ```
+[Pypi Link](https://pypi.python.org/pypi/flask-csp)
+
 ## Usage
-Add the csp_header(...) decorator after the app.route(...) decorator to create a csp header on each route. The decorator can either be passed no value (Add default policies) or custom values by a dict (Add custom policies). For more information on the default policies see "Change Default Policies" below
+Add the csp_header(...) decorator after the app.route(...) decorator to create a csp header on each route. The decorator can either be passed no value (Add default policies) or custom values by a dict (Add custom policies). For more information on the default policies see "Change Default Policies" below.
 
 ### Add default header
 ```python
@@ -22,7 +23,7 @@ from flask_csp.csp import csp_header
 @csp_header()
 ```
 ### Add custom header
-Pass the csp_header wrapper a dict with the policies to change
+Pass the csp_header wrapper a dict with the policies to change:
 ```python
 from flask_csp.csp import csp_header
 ...
@@ -34,6 +35,7 @@ Notes:
 * 4 keywords in policies must always be encapsulated in single quotes: 'none', 'self', 'unsafe-inline','unsafe-eval'
 
 ### Report only header
+To set the header to "Report only" pass the key/value pair 'report-only':True to the custom header dict:
 ```python
 from flask_csp.csp import csp_header
 ...
@@ -72,7 +74,7 @@ To view the default policies:
 >>> h.read()
 ```
 Note: 
-* python interpreter must be reloaded for changes to default to take place
+* Python interpreter must be reloaded for changes to the default policies to take place
 
 ## Violation Reports
 Based on the default settings, reports will be sent to the route 'csp_report' through a POST request. This is totally customizable but here is a very simplistic example of handling these reports:
