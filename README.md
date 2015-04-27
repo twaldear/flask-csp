@@ -6,11 +6,10 @@ More information on CSP:
 * [useful guide](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 
 ## Installation
-Install the extension with using pip, or easy_install.
+Install the extension with using pip, or easy_install. [Pypi Link](https://pypi.python.org/pypi/flask-csp)
 ```bash
 $ pip install flask-csp
 ```
-[Pypi Link](https://pypi.python.org/pypi/flask-csp)
 
 ## Usage
 Add the csp_header(...) decorator after the app.route(...) decorator to create a csp header on each route. The decorator can either be passed no value (Add default policies) or custom values by a dict (Add custom policies). For more information on the default policies see "Change Default Policies" below.
