@@ -84,7 +84,7 @@ class CspTestCustomDecoratorRemove(unittest.TestCase):
 			assert "default-src" not in result.headers.get('Content-Security-Policy')
 
 class CspTestReadOnly(unittest.TestCase):
-	""" test removing policy through custom decorator values """
+	""" test read only """
 	def setUp(self):
 		self.app = Flask(__name__)
 		@self.app.route('/')
