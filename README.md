@@ -59,11 +59,18 @@ The default policies are as follows:
   "report-uri": "/csp_report"
 }
 ```
-Editing of the default policies can be done via command line:
+Edit default policies via command line:
 ```python
 >>> from flask_csp.csp import csp_default
 >>> h = csp_default()
 >>> h.update({'child-src':"'self'"})
+```
+Edit default policies on flask app:
+```python
+from flask_csp.csp import csp_header, csp_default
+
+h = csp_default()
+h.update({'script-src':"'self' code.jquery.com"})
 ```
 
 To view the default policies:
