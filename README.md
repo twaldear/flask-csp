@@ -32,6 +32,8 @@ from flask_csp.csp import csp_header
 Notes: 
 * Only policies with a non empty value are added to the header. The wrapper @csp_header({'default-src':""}) will remove 'default-src ...' from the header
 * 4 keywords in policies must always be encapsulated in single quotes: 'none', 'self', 'unsafe-inline','unsafe-eval'
+* The data permission is spelled with a colon
+  * ex: @csp_header({'default-src':"'none'",'script-src':"'self'", 'font-src': "data: 'self'"})
 
 ### Report only header
 To set the header to "Report only" pass the key/value pair 'report-only':True to the custom header dict:
