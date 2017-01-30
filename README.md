@@ -89,7 +89,7 @@ Based on the default settings, reports will be sent to the route 'csp_report' th
 ```python
 @app.route('/csp_report',methods=['POST'])
 def csp_report():
-	with open('/var/log/csp/csp_reports'), "a") as fh:
+	with open('/var/log/csp/csp_reports', "a") as fh:
 		fh.write(request.data+"\n")
 	return 'done'
 ```
