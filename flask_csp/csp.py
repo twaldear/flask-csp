@@ -11,7 +11,7 @@ class csp_default:
 		with open(self.default_file) as json_file:
 			try:
 				return json.load(json_file)
-			except Exception, e:
+			except Exception as e:
 				raise 'empty file'
 			
 	def update(self,updates={}):
